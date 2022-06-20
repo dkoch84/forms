@@ -62,7 +62,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                         child: TextFormField(
                           decoration: const InputDecoration(
                             border: OutlineInputBorder(),
-                            labelText: 'Enter your name',
+                            labelText: 'Name',
                           ),
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -77,7 +77,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                         child: TextFormField(
                           decoration: const InputDecoration(
                             border: OutlineInputBorder(),
-                            labelText: 'Enter your name',
+                            labelText: 'Email Address',
                           ),
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -92,7 +92,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                         child: TextFormField(
                           decoration: const InputDecoration(
                             border: OutlineInputBorder(),
-                            labelText: 'Enter your name',
+                            labelText: 'Conctact Phone #',
                           ),
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -114,7 +114,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                         child: TextFormField(
                           decoration: const InputDecoration(
                             border: OutlineInputBorder(),
-                            labelText: 'Enter your name',
+                            labelText: 'Location',
                           ),
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -129,7 +129,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                         child: TextFormField(
                           decoration: const InputDecoration(
                             border: OutlineInputBorder(),
-                            labelText: 'Enter your name',
+                            labelText: 'LinkedIn Profile ID',
                           ),
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -144,7 +144,36 @@ class MyCustomFormState extends State<MyCustomForm> {
                         child: TextFormField(
                           decoration: const InputDecoration(
                             border: OutlineInputBorder(),
-                            labelText: 'Enter your name',
+                            labelText: 'GitHub',
+                          ),
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter some text';
+                            }
+                            return null;
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        child: TextFormField(
+                          keyboardType: TextInputType.multiline,
+                          maxLines: 3,
+                          decoration: const InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Give a short introduction to yourself. Should be a short paragraph.',
                           ),
                           validator: (value) {
                             if (value == null || value.isEmpty) {
